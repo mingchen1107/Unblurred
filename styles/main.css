@@ -1,0 +1,207 @@
+/* SETUP */
+
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: inherit;
+            box-sizing: inherit;
+}
+
+html {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, Roboto, sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+
+
+/* APP */
+
+
+.app {
+    max-width: 44rem;
+    margin: 0 auto;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+
+
+/* TITLE */
+
+.title {
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.title > h1 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+
+
+/* CLOCKS */
+
+
+.clocks {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    overflow-x: scroll;
+}
+
+.clock {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    padding: 1rem;
+}
+
+.clock-label {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.clock-time {
+    font-size: 40px;
+    font-variant-numeric: tabular-nums;
+}
+
+.clock-unit {
+    font-size: 24px;
+}
+
+
+
+/* DESCRIPTION */
+
+
+.description {
+    padding: 0 1rem;
+    font-size: 16px;
+    line-height: 1.5;
+    opacity: 0.8;
+}
+
+.description > p {
+    margin: 1rem 0;
+}
+
+.description > ul {
+    padding-left: 1.75rem;
+    margin: 1rem 0;
+}
+
+
+
+/* BUTTONS */
+
+
+.buttons-outer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.buttons-inner {
+    margin: 0 auto;
+    max-width: 26rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+}
+
+.button {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    border: 0;
+    outline: 0;
+    padding: 0;
+    border-radius: 34px 34px 0 0;
+    background-color: white;
+    -webkit-transition: padding 280ms, background-color 170ms;
+    transition: padding 280ms, background-color 170ms;
+}
+
+.button-on {
+    background-color: #EEE;
+    padding-bottom: 12px;
+}
+
+.button-icon {
+    margin-top: 0.5rem;
+    padding: 34px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.button:nth-of-type(1) > .button-icon {
+    background-image: url("/images/icons/eye.svg");
+    background-size: 38px;
+}
+
+.button:nth-of-type(2) > .button-icon {
+    background-image: url("/images/icons/check.svg");
+    background-size: 34px;
+}
+
+.button:nth-of-type(3) > .button-icon {
+    background-image: url("/images/icons/human.svg");
+    background-size: 38px;
+}
+
+.button:nth-of-type(4) > .button-icon {
+    background-image: url("/images/icons/alert.svg");
+    background-size: 36px;
+}
+
+
+.button-label {
+    font-size: 14px;
+    padding: 1rem 0;
+    opacity: 0.8;
+}
+
+
+
+/* SCREENS */
+
+
+@media screen and (min-width: 42rem) {
+    .clock-time {
+        font-size: 56px;
+    }
+
+    .clock-unit {
+        font-size: 32px;
+    }
+
+    .clocks {
+        padding: 1rem 0;
+    }
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Unblurred</title>
+        <meta name="description" content="Do with intent.">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <link rel="stylesheet" href="/styles/main.css">
+        <link rel="icon" href="/images/logo.png">
+        <meta property="og:title" content="Unblurred">
+        <meta property="og:description" content="Do with intent.">
+        <meta property="og:image" content="/images/banner.png">
+        <meta property="og:url" content="https://https://mingchen1107.github.io/Unblurred">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="theme-color" content="#FFFFFF">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="white">
+        <script src="/scripts/main.js"></script>
+    </head>
+    <body>
+        <main class="app"></main>
+        <script type="text/javascript">
+            var app = Elm.Main.init({
+                node: document.querySelector(".app"),
+                flags: JSON.parse(window.localStorage.getItem("cache"))
+            });
+            app.ports.cache.subscribe(function(data) {
+                window.localStorage.setItem("cache", JSON.stringify(data));
+            });
+        </script>
+    </body>
+</html>
